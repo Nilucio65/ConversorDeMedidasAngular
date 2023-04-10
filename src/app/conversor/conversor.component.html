@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="row row-cols-lg-auto g-3 align-items-center card position-absolute top-50 start-50 translate-middle" >
+    <div class="col-12">
+      
+      <label class="visually-hidden" for="inlineFormInputGroupUsername">Valor</label>
+
+      <div class="input-group">
+        <div class="col-12" id="um">
+          <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+
+          <select class="form-select" id="inlineFormSelectPref" (change)="OnChange()" [(ngModel)]="str1" >
+            <option value="Cm">Cm</option>
+            <option value="Yd">Yd</option>
+            <option value="M">M</option>
+          </select>
+
+        </div>
+        <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="Valor"  [(ngModel)]="num1">
+      </div>
+    </div>
+    <br>
+    <div class="col-12">
+      <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+      <select class="form-select" id="inlineFormSelectPref" [(ngModel)]="str2">
+        <option value="Cm">Cm</option>
+        <option value="Yd">Yd</option>
+        <option value="M">M</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <button type="button" class="btn btn-primary" (click)="calcular()">Calcular</button>
+    </div>
+
+
+
+    <div >
+      <label class="visually-hidden">Valor</label>
+
+      <div class="input-group">
+
+        </div>
+        <input type="text" class="form-control" placeholder="Resposta" readonly  [(ngModel)]="resp">
+      </div>
+
+
+  </div>
+</body>
+</html>
